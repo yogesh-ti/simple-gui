@@ -4,7 +4,6 @@ tasks:
       cd ..
       git clone -b develop --single-branch https://github.com/yogesh-ti/simple-api.git
       cd simple-api
-      rm -rf .git
     init: |
       pip install fastapi uvicorn[standard]
     command: |
