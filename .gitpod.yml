@@ -3,7 +3,7 @@ tasks:
     init: |
       yarn install
     command: |
-      export FULLSTACK_BACKEND=`gp url 8000`
+      REACT_APP_FULLSTACK_BACKEND=`gp url 8000` \
       yarn start
 
   - name: api

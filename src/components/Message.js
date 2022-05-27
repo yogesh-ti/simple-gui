@@ -6,7 +6,7 @@ export default function Message() {
 
     const message = async () => {
         try{
-            let res = await axios.get(process.env.FULLSTACK_BACKEND)
+            let res = await axios.get(process.env.REACT_APP_FULLSTACK_BACKEND)
             let result = res.data
             setResult(result)
         } catch(e) {
