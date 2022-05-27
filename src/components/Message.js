@@ -6,7 +6,7 @@ export default function Message() {
 
     const message = async () => {
         try{
-            let res = await axios.get("https://8000-purple-lark-7y3ixq93.ws.trilogy.devspaces.com/")
+            let res = await axios.get(process.env.FULLSTACK_FRONTEND)
             let result = res.data
             setResult(result)
         } catch(e) {
