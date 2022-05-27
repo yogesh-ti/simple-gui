@@ -1,11 +1,4 @@
 tasks:
-  - name: gui
-    init: |
-      yarn install
-    command: |
-      REACT_APP_FULLSTACK_BACKEND=`gp url 8000` \
-      yarn start
-
   - name: api
     before: |
       cd ..
@@ -17,6 +10,13 @@ tasks:
     command: |
       export FULLSTACK_FRONTEND=`gp url 3000`
       uvicorn main:app --reload
+  - name: gui
+    init: |
+      yarn install
+    command: |
+      REACT_APP_FULLSTACK_BACKEND=`gp url 8000` \
+      yarn start
+
 ports:
   - port: 8000
     visibility: public
