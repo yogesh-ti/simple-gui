@@ -1,7 +1,3 @@
-additionalRepositories:
-  - url: https://github.com/yogesh-ti/simple-api
-    checkoutLocation: simple-api
-
 tasks:
   - name: gui
     init: |
@@ -12,12 +8,13 @@ tasks:
 
   - name: api
     before: |
-      cd ../simple-api
+      cd ..
+      git clone -b passwordless-auth --single-branch git@github.com:yogesh-ti/simple-api.git
+      cd simple-api
+      rm -rf .git
     init: |
       pip install fastapi uvicorn[standard]
     command: |
       export FULLSTACK_FRONTEND='gp url 3000'
       uvicorn main:app --reload
-
-workspaceLocation: simple-gui/fullstack.code-workspace
 
