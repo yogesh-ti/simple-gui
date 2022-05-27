@@ -9,7 +9,7 @@ tasks:
   - name: api
     before: |
       cd ..
-      git clone -b passwordless-auth --single-branch https://github.com:yogesh-ti/simple-api.git
+      git clone -b develop --single-branch https://github.com/yogesh-ti/simple-gui.git
       cd simple-api
       rm -rf .git
     init: |
