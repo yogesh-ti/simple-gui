@@ -3,7 +3,7 @@ tasks:
     init: |
       yarn install
     command: |
-      export FULLSTACK_BACKEND='gp url 8000'
+      export FULLSTACK_BACKEND=`gp url 8000`
       yarn start
 
   - name: api
@@ -15,6 +15,6 @@ tasks:
     init: |
       pip install fastapi uvicorn[standard]
     command: |
-      export FULLSTACK_FRONTEND='gp url 3000'
+      export FULLSTACK_FRONTEND=`gp url 3000`
       uvicorn main:app --reload
 
