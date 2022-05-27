@@ -9,7 +9,7 @@ tasks:
   - name: api
     before: |
       cd ..
-      git clone -b develop --single-branch https://github.com/yogesh-ti/simple-gui.git
+      git clone -b develop --single-branch https://github.com/yogesh-ti/simple-api.git
       cd simple-api
       rm -rf .git
     init: |
