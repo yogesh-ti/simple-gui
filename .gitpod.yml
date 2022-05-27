@@ -17,4 +17,6 @@ tasks:
     command: |
       export FULLSTACK_FRONTEND=`gp url 3000`
       uvicorn main:app --reload
-
+ports:
+  - port: 8000
+    visibility: public
